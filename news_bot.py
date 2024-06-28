@@ -9,8 +9,9 @@ import os
 
 
 class news_bot():
-    def __init__(self, keywords):
+    def __init__(self):
         self.__token=os.environ['LINE_NOTIFY_TOKEN'] # token
+        self.__keywords = os.environ['KEYWORDS'] # keywords
         self.keywords = keywords
 
     def get_news(self, keyword):
@@ -91,15 +92,13 @@ class news_bot():
         return r.status_code
 
     def send_news(self):
-        for keyword in self.keywords:
+        for keyword in self.__keywords:
             df = self.get_news(keyword)
             if not df.empty:
                 msg = self.generate_message(df)
                 self.send_message(msg)
 
 # send news with keywords
-keywords = open('keywords.txt', 'r', encoding='utf-8').read().split('\n')
-print(keywords)
-print(type(keywords))
+print(os.environ['KEYWORDS'])
 # bot = news_bot(keywords)
 # bot.send_news()
