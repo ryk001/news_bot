@@ -12,7 +12,7 @@ class news_bot():
     def __init__(self):
         self.__token=os.environ['LINE_NOTIFY_TOKEN'] # token
         self.__keywords = os.environ['KEYWORDS'].split('\n') # keywords
-        self.keywords = keywords
+        # self.keywords = keywords
 
     def get_news(self, keyword):
 
@@ -99,6 +99,6 @@ class news_bot():
                 self.send_message(msg)
 
 # send news with keywords
-print(os.environ['KEYWORDS'].split('\n'))
-# bot = news_bot(keywords)
-# bot.send_news()
+# print(os.environ['KEYWORDS'].split('\n'))
+bot = news_bot()
+bot.send_news()
