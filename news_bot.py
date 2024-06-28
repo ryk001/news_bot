@@ -5,6 +5,7 @@ import pandas as pd
 import requests
 import datetime as dt
 import re
+import os
 
 
 class news_bot():
