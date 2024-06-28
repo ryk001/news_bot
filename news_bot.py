@@ -100,5 +100,5 @@ class news_bot():
 # send news with keywords
 keywords = open('keywords.txt', 'r', encoding='utf-8').read()
 print(keywords)
-bot = news_bot(keywords)
-bot.send_news()
+# bot = news_bot(keywords)
+# bot.send_news()
