@@ -1,4 +1,4 @@
-name: Sending-Current-Stock-Prices-With-Line
+name: News-Bot
 
 on:
   schedule:
