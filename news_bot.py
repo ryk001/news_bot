@@ -98,7 +98,7 @@ class news_bot():
                 self.send_message(msg)
 
 # send news with keywords
-keywords = open('keywords.txt', 'r', encoding='utf-8').read().split(',')
+keywords = open('keywords.txt', 'r', encoding='utf-8').read().split('\n')
 print(keywords)
 print(type(keywords))
 # bot = news_bot(keywords)
