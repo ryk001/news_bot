@@ -99,6 +99,6 @@ class news_bot():
                 self.send_message(msg)
 
 # send news with keywords
-print(os.environ['KEYWORDS'].split('\n')
+print(os.environ['KEYWORDS'].split('\n'))
 # bot = news_bot(keywords)
 # bot.send_news()
