@@ -25,7 +25,7 @@
   
   NVIDIA
   
-  (不需要加逗號，換行來區分關鍵字)
+  (不需要加逗號，只需要換行來區分關鍵字)
 - 再建立一個名為`LINE_NOTIFY_TOKEN`的 secret，裡面填上 LINE Notify 的金鑰
 - **secret 必須按照以上格式填寫!!!**
 
