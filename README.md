@@ -8,7 +8,7 @@
 
 
 ## 2. 複製這個專案到自己的帳號
-- 项目地址：[github/news_bot](https://github.com/ryk001/news_bot.git)
+- 專案地址：[github/news_bot](https://github.com/ryk001/news_bot.git)
 - 點擊右上角 Fork 專案至自己的帳號底下
 
 ![run](https://s2.loli.net/2024/06/29/Zacqzg1kQ5wxKfu.png)
