@@ -21,7 +21,9 @@
 
 - 建立一個名為`KEYWORDS`的 secret，裡面填上你要的關鍵字，假設你想要看到 "台積電"、"NVIDIA" 的新聞，則填入格式是：
   台積電
+  
   NVIDIA
+  
   (不需要加逗號，換行來區分關鍵字)
 - 再建立一個名為`LINE_NOTIFY_TOKEN`的 secret，裡面填上 LINE Notify 的金鑰
 - **secret 必須按照以上格式填寫!!!**
