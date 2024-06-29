@@ -57,7 +57,8 @@ class news_bot():
         # only relevant news
         useless_news = ['對帳單', '加權指數', '盤中焦點股', '熱門']
         df['title'] = df['title'].astype(str)
-        df = df[(~df['title'].str.contains('|'.join(useless_news))) & (df['title'].str.contains(keyword.split(' ')[0]))]
+        df = df[(~df['title'].str.contains('|'.join(useless_news)))]
+        # df = df[(df['title'].str.contains(keyword.split(' ')[0]))]
 
         # only finance source
         relevant_source = ['中時新聞網', '工商時報', '經濟日報', '自由財經', 'Yahoo奇摩新聞', 'Anue鉅亨', 'ETtoday財經雲']
