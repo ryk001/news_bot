@@ -4,8 +4,7 @@
 請跟著這個步驟做下去^^
 
 ## 1. 申請 LINE 金鑰
-這樣才可以傳訊息給自己。
-  - LINE Notify API 的金鑰，申請方式請參考: https://notify-bot.line.me/zh_TW
+這樣才可以傳訊息給自己，申請方式請參考: https://notify-bot.line.me/zh_TW
 
 
 ## 2. 複製這個專案到自己的帳號
