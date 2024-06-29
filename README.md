@@ -20,6 +20,7 @@
 ![run](https://s2.loli.net/2024/06/30/q9l67TORWCzSkVt.png)
 
 - 建立一個名為`KEYWORDS`的 secret，裡面填上你要的關鍵字，假設你想要看到 "台積電"、"NVIDIA" 的新聞，則填入格式是：
+
   台積電
   
   NVIDIA
