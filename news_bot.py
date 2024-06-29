@@ -31,7 +31,7 @@ class news_bot():
 
         # title & url
         for item in soup.find_all("a", class_="JtKRv"):
-            title.append(str(item.get_text()))
+            title.append(item.get_text())
             try:
                 url.append(Shortener().tinyurl.short(item.get('href').replace('.', 'https://news.google.com', 1)))
             except:
@@ -56,6 +56,7 @@ class news_bot():
 
         # only relevant news
         useless_news = ['對帳單', '加權指數', '盤中焦點股', '熱門']
+        df['title'] = df['title'].astype(str)
         df = df[(~df['title'].str.contains('|'.join(useless_news))) & (df['title'].str.contains(keyword.split(' ')[0]))]
 
         # only finance source
