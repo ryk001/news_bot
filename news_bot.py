@@ -1,18 +1,16 @@
 from pyshorteners import Shortener
 from dateutil.parser import parse
 from bs4 import BeautifulSoup
+import datetime as dt
 import pandas as pd
 import requests
-import datetime as dt
 import re
 import os
 
-
 class news_bot():
-    def __init__(self):
-        self.__token=os.environ['LINE_NOTIFY_TOKEN'] # token
-        self.__keywords = os.environ['KEYWORDS'].split('\n') # keywords
-        # self.keywords = keywords
+    def __init__(self, token, keywords):
+        self.__token=token
+        self.__keywords=keywords
 
     def get_news(self, keyword):
 
@@ -26,13 +24,14 @@ class news_bot():
         period = '3d' if dt.datetime.today().weekday() == 0 else '1d'
         res = requests.get(f'https://news.google.com/search?q="{keyword}"%20when%3A{period}&hl=zh-TW&gl=TW&ceid=TW%3Azh-Hant')
         if res.status_code != 200:
-            return print('error')
+            return pd.DataFrame()
+        
         content = res.content
         soup = BeautifulSoup(content, "html.parser")
 
         # title & url
         for item in soup.find_all("a", class_="JtKRv"):
-            title.append(item.get_text())
+            title.append(str(item.get_text()))
             try:
                 url.append(Shortener().tinyurl.short(item.get('href').replace('.', 'https://news.google.com', 1)))
             except:
@@ -57,7 +56,6 @@ class news_bot():
 
         # only relevant news
         useless_news = ['對帳單', '加權指數', '盤中焦點股', '熱門']
-        df['title'] = df['title'].astype(str)
         df = df[(~df['title'].str.contains('|'.join(useless_news))) & (df['title'].str.contains(keyword.split(' ')[0]))]
 
         # only finance source
@@ -73,7 +71,6 @@ class news_bot():
         keyword = df['keyword'][0]
         message = f'*{keyword}*\n'
         for i in range(len(df)):
-            keyword = df["keyword"][i]
             title = df["title"][i]
             time = df["time"][i]
             source = df["source"][i]
@@ -99,6 +96,7 @@ class news_bot():
                 self.send_message(msg)
 
 # send news with keywords
-# print(os.environ['KEYWORDS'].split('\n'))
-bot = news_bot()
+token = os.environ['LINE_NOTIFY_TOKEN'] # token
+keywords = os.environ['KEYWORDS'].split('\n') # keywords
+bot = news_bot(token, keywords)
 bot.send_news()
