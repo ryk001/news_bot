@@ -13,7 +13,7 @@
 
 ![run](https://s2.loli.net/2024/06/29/Zacqzg1kQ5wxKfu.png)
 
-### 3. 設定新聞關鍵字、LINE 金鑰到 Secrets
+## 3. 設定新聞關鍵字、LINE 金鑰到 Secrets
 (如果不設置 Secrets 的話所有人都可以傳 LINE 給你，也可以看到你的新聞關鍵字😂)
 - 回到專案頁面，依次點擊`Settings`-->`Secrets`-->`New secret`
 
@@ -26,7 +26,7 @@
 - 再建立一個名為`LINE_NOTIFY_TOKEN`的 secret，裡面填上 LINE Notify 的金鑰
 - **secret 必須按照以上格式填寫!!!**
 
-### 4. 啟用 Actions
+## 4. 啟用 Actions
 
 Actions 默認是關閉狀態，在 Fork 之後需要先手動執行一次，成功運行才會被激活。
 
