@@ -1,4 +1,4 @@
-# Google新聞機器人 2024 版
+# Google 新聞機器人 2024 版
 
 <a href="url"><img src="https://s2.loli.net/2024/06/30/JqMlkrP4CSIz7jU.png" height="600" ></a>
 
