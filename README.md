@@ -1,6 +1,6 @@
 # Google新聞機器人 2024 版
 
-<a href="url"><img src="https://s2.loli.net/2024/06/30/JqMlkrP4CSIz7jU.png" height="200" ></a>
+<a href="url"><img src="https://s2.loli.net/2024/06/30/JqMlkrP4CSIz7jU.png" height="600" ></a>
 
 想要每個上班日的早上在 LINE 收到特定關鍵字的新聞嗎？
 請跟著這個步驟做下去^^
