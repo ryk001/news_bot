@@ -3,7 +3,7 @@ name: News-Bot
 on:
   schedule:
   # scheduled at 8am (UTC+8), weekdays
-    - cron: "01 0 * * 1,2,3,4,5"
+    - cron: "50 22 * * 1,2,3,4,7"
   workflow_dispatch:
 
 env:
